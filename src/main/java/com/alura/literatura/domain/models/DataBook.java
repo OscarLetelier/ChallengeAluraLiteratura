@@ -8,7 +8,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public record DataBook(
         @JsonAlias("title") String title,
-        @JsonAlias("author") List<DataAuthor> authors,
+        @JsonAlias("authors") List<DataAuthor> authors, // Debe coincidir con el JSON array
         @JsonAlias("languages") List<String> languages,
         @JsonAlias("download_count") Double downloadCount
 ) {
